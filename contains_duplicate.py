@@ -1,10 +1,10 @@
 def containsduplicate(nums):
     seen = set()
     for num in nums:
-        if num in seen:
-            return True
         seen.add(num)
-    return False
+    if(len(seen) == len(nums)):
+        return False
+    return True
 
-nums = [3,5,6,7,3]
+nums = [3,5,6,7]
 print(containsduplicate(nums))
